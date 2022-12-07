@@ -1,0 +1,51 @@
+[
+  {
+    "ID": 1,
+    "DishImage": "Zeb",
+    "DishName": "Pad Ki Mao",
+    "DishDescreption": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass,Magic Chili Brown Coconut",
+    "FoodType": "Spicy",
+    "Price": "₪55"
+  },
+  {
+    "ID": 1,
+    "DishImage": "Zeb",
+    "DishName": "Pad Ki Mao",
+    "DishDescreption": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass,Magic Chili Brown Coconut",
+    "FoodType": "Vegan",
+    "Price": "5₪"
+  },
+  {
+    "ID": 1,
+    "DishImage": "Zeb",
+    "DishName": "Pad Ki Mao",
+    "DishDescreption": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass,Magic Chili Brown Coconut",
+    "FoodType": "Vegeterian",
+    "Price": "5₪"
+  },
+  {
+    "ID": 1,
+    "DishImage": "Zeb",
+    "DishName": "Pad Ki Mao",
+    "DishDescreption": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass,Magic Chili Brown Coconut",
+    "FoodType": "Spicy",
+    "Price": "5₪"
+  },
+  {
+    "ID": 1,
+    "DishImage": "Zeb",
+    "DishName": "Pad Ki Mao",
+    "DishDescreption": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass,Magic Chili Brown Coconut",
+    "FoodType": "Vegan",
+    "Price": "5₪"
+  },
+  {
+    "ID": 1,
+
+    "DishImage": "Zeb",
+    "DishName": "Pad Ki Mao",
+    "DishDescreption": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass,Magic Chili Brown Coconut",
+    "FoodType": "Vegeterian",
+    "Price": "5₪"
+  }
+]
