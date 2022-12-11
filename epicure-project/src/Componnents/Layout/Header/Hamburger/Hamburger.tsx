@@ -40,7 +40,7 @@ const HamburgerHeader = () => {
           <XOut src={x} alt="" onClick={() => setIfHamburger(false)} />
           <UpperHamburger>
             <HamburgerResturant>
-              <LinkStyle to="/Homepage_resturant_all">Resturants</LinkStyle>
+              <LinkStyle to="/homePage_restaurants_All">Resturants</LinkStyle>
             </HamburgerResturant>
             <LinkStyle to="/Mobile/Chefs/All">Chefs</LinkStyle>
           </UpperHamburger>

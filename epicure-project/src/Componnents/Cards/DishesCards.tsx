@@ -1,5 +1,6 @@
 import {
   AllResturantsCard,
+  ArrowRouter,
   ArrowToResturants,
   ResturantsRouter,
   ResturantsTitle,
@@ -26,8 +27,8 @@ const DishCard = () => {
         <AllCardsInside>
           {DishData.map((dish) => {
             return (
-              <CardContainer>
-                <CardImage />
+              <CardContainer key={dish.ID}>
+                <CardImage src={dish.DishImage} />
                 <CardsLayout>
                   {dish.DishName}
                   <CardDescreption>{dish.DishDescreption}</CardDescreption>
@@ -40,8 +41,12 @@ const DishCard = () => {
         </AllCardsInside>
       </CardStyled>
       <AllResturantsCard>
-        <ResturantsRouter>All Resturants</ResturantsRouter>
-        <ArrowToResturants src={Arrow} alt="" />
+        <ResturantsRouter to="/homePage_restaurants_All">
+          All Resturants
+        </ResturantsRouter>
+        <ArrowRouter to="/homePage_restaurants_All">
+          <ArrowToResturants src={Arrow} alt="" />
+        </ArrowRouter>
       </AllResturantsCard>
     </>
   );

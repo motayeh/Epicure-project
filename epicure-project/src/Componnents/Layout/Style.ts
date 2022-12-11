@@ -84,15 +84,15 @@ export const RightBar = styled.div`
   align-items: center;
 `;
 export const RightSearch = styled.img`
-  position: flex;
-  margin: 0 0;
+  position: relative;
+  left: 14px;
 `;
 export const RightCart = styled.img``;
 export const RightProfile = styled.img``;
 
 export const ItemsMove = styled.div`
   display: flex;
-
+  flex-direction: row;
   margin-right: 20px;
   gap: 13px;
   width: 30%;
@@ -136,6 +136,7 @@ export const SearchBar = styled.input`
   height: 20px;
   margin: 0 auto;
   align-content: center;
+  align-items: center;
   outline: none;
   border: none;
 `;
@@ -146,6 +147,7 @@ export const BarSearchItems = styled.div`
   flex-direction: inline;
   align-content: center;
   justify-content: center;
+  align-items: center;
   margin: 0 20px;
   padding: 5px 12px;
   border-radius: 4px;
@@ -238,7 +240,7 @@ export const InputInfo = styled.div`
   justify-content: flex-end;
   padding-left: 25px;
   flex-direction: column;
-
+  align-items: center;
   gap: 8px;
   order: 1;
   width: 327px;

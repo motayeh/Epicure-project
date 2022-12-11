@@ -37,8 +37,6 @@ export const Cards = styled.div`
   padding: 0px;
 
   width: 99.3%;
-
-  margin-bottom: 5%;
 `;
 
 export const FoodImage = styled.img`
@@ -55,7 +53,7 @@ export const CardDescreption = styled.div`
   gap: 10px;
   width: 100%;
   height: 81px;
-
+  margin-bottom: 5%;
   background: #f9f4ea;
 `;
 

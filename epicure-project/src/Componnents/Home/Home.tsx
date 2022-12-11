@@ -19,8 +19,8 @@ const Home = () => {
     <>
       <HeroHome></HeroHome>
       <ResturantsTitle>popular restaurant in epicure:</ResturantsTitle>
-      <Cards></Cards>
-      <SignaturDish></SignaturDish>
+      <Cards key={1}></Cards>
+      <SignaturDish key={2}></SignaturDish>
       <ChefOfTheWeekContainer>
         <ChefTitle>Chef of the week:</ChefTitle>
         <ChefImageContainer>
@@ -35,7 +35,7 @@ const Home = () => {
           expressed in the every detail of each and every dish.
         </ChefDiscreption>
         <ChefTitle>Chef of the week:</ChefTitle>
-        <ChefCard></ChefCard>
+        <ChefCard key={3}></ChefCard>
       </ChefOfTheWeekContainer>
       <AboutUs></AboutUs>
     </>

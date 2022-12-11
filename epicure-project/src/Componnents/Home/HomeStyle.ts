@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import HeroMe from '../../assets/HeroMe.svg';
 export const Hero = styled.div`
@@ -13,8 +14,6 @@ export const Hero = styled.div`
 export const SearchHeroBar = styled.div`
   display: flex;
   flex-direction: column;
-
-  justify-content: center;
 
   align-items: center;
 
@@ -58,12 +57,21 @@ export const SearchInBackGround = styled.input`
   font-size: 12px;
   line-height: 15px;
   /* identical to box height */
-  padding-left: 18px;
+  padding-left: 35px;
+  position: relative;
+  bottom: 10px;
   letter-spacing: 1.29px;
 `;
 
 export const SearchImgInBackGround = styled.img`
+  position: relative;
+
   padding-left: 3%;
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  top: 10px;
+  border-radius: 0px;
 `;
 
 export const BarSearchContainer = styled.div`
@@ -71,10 +79,9 @@ export const BarSearchContainer = styled.div`
 
   align-content: center;
   display: flex;
-  flex-direction: inline;
+  flex-direction: column;
   border: 0.5px solid #000000;
-  padding-top: 5px;
-  padding-bottom: 5px;
+
   border-radius: 4px;
   background-color: transparent;
 `;
@@ -102,7 +109,7 @@ export const AllResturantsCard = styled.div`
   padding-left: 26px;
   align-content: center;
 `;
-export const ResturantsRouter = styled.div`
+export const ResturantsRouter = styled(Link)`
   font-weight: 400;
   font-size: 16px;
   line-height: 35px;
@@ -111,6 +118,7 @@ export const ResturantsRouter = styled.div`
   text-align: right;
   letter-spacing: 2px;
   text-transform: capitalize;
+  text-decoration: none;
 
   color: #000000;
 `;
@@ -356,4 +364,87 @@ export const AboutUsText = styled.div`
   letter-spacing: 2.14px;
 
   color: #000000;
+`;
+export const ArrowRouter = styled(Link)`
+  display: flex;
+  height: 17.99947166442871px;
+  width: 24.000051498413086px;
+  align-items: center;
+  position: relative;
+  top: 10px;
+`;
+
+export const FirstInSearchHero = styled.div`
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1.29px;
+  padding-left: 13%;
+  color: #000000;
+`;
+export const ResturantsFoundHero = styled.div`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  padding-left: 13%;
+  letter-spacing: 1.29px;
+
+  color: #000000;
+`;
+
+export const SeconedInSearchHero = styled.div`
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1.29px;
+  padding-left: 13%;
+  color: #000000;
+`;
+
+export const DishesFoundHero = styled.div`
+  display: flex;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  flex-direction: column;
+  padding-left: 13%;
+  letter-spacing: 1.29px;
+
+  color: #000000;
+`;
+
+export const SearchResults = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  height: 120px;
+  left: 136px;
+  top: 179px;
+  gap: 10px;
+  padding-top: 6%;
+  margin-left: 18%;
+  border: 0.5px solid black;
+  margin: 0 20px;
+  background: #ffffff;
+  overflow-y: auto;
+  border-radius: 2%;
+  text-overflow: clip;
+  &.hidden {
+    display: none;
+  }
+`;
+
+export const ContainAll = styled.div`
+  position: relative;
+  top: 54%;
+  left: 6.7%;
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  align-items: center;
 `;

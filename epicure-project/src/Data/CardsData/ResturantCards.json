@@ -3,7 +3,7 @@
     "ID": 1,
     "ResturantImage": "https://cdn.ksamenus.com/wp-content/uploads/2022/06/%D9%85%D9%86%D9%8A%D9%88-%D8%A7%D9%84%D8%A8%D9%8A%D9%83-%D8%A7%D9%84%D8%A7%D8%AD%D8%B3%D8%A7%D8%A1.webp?strip=all&lossy=1&ssl=1",
     "ResturantName": "AlBaik",
-    "CheifName": "Khalid Abn Alwalid",
+    "CheifName": "AlBaik Ahmad",
     "Rate": 3.5,
     "Since": 1544048522000,
     "working_Days": {
@@ -25,15 +25,15 @@
       },
       "Thursday": {
         "Open": "08:15",
-        "Close": "15:15"
+        "Close": "18:15"
       },
       "Friday": {
         "Open": "11:15",
         "Close": "00:15"
       },
       "Suturday": {
-        "Open": "",
-        "Close": ""
+        "Open": "11:30",
+        "Close": "22:00"
       }
     }
   },
@@ -59,19 +59,19 @@
       },
       "Wednesday": {
         "Open": "08:15",
-        "Close": "15:15"
+        "Close": "20:15"
       },
       "Thursday": {
         "Open": "08:15",
-        "Close": "15:15"
+        "Close": "21:15"
       },
       "Friday": {
         "Open": "11:15",
         "Close": "00:15"
       },
       "Suturday": {
-        "Open": "",
-        "Close": ""
+        "Open": "10:00",
+        "Close": "14:33"
       }
     }
   },
@@ -119,7 +119,7 @@
     "ResturantName": "Taoazo",
     "CheifName": "Yuval Bin Narya",
     "Rate": 5,
-    "Since": 1007590922000,
+    "Since": 1607363563,
     "working_Days": {
       "Sunday": {
         "Open": "12:23",
@@ -157,7 +157,7 @@
     "ResturantName": "OCD TLV",
     "CheifName": "Raz Rahav",
     "Rate": 5,
-    "Since": 786666122000,
+    "Since": 1670434311,
     "working_Days": {
       "Sunday": {
         "Open": "12:23",

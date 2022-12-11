@@ -1,5 +1,6 @@
 import {
   AllResturantsCard,
+  ArrowRouter,
   ArrowToResturants,
   ResturantsRouter,
 } from '../Home/HomeStyle';
@@ -16,6 +17,7 @@ import {
 } from './CardsStyle';
 import Arrow from '../../assets/Arrow.svg';
 import ChefCards from '../../Data/CardsData/ChefCards.json';
+import { keys } from '@mui/system';
 
 const ChefCard = () => {
   return (
@@ -24,8 +26,8 @@ const ChefCard = () => {
         <AllCardsInsideChef>
           {ChefCards.map((card) => {
             return (
-              <CardContainer>
-                <CardImage />
+              <CardContainer key={card.ID}>
+                <CardImage src={card.DishImage} />
                 <CardsLayout>{card.DishName}</CardsLayout>
               </CardContainer>
             );
@@ -33,8 +35,12 @@ const ChefCard = () => {
         </AllCardsInsideChef>
       </CardStyled>
       <AllResturantsCardChef>
-        <ResturantsRouterChef>All Resturants</ResturantsRouterChef>
-        <ArrowToResturants src={Arrow} alt="" />
+        <ResturantsRouterChef to="/homePage_restaurants_All">
+          All Resturants
+        </ResturantsRouterChef>
+        <ArrowRouter to="/homePage_restaurants_All">
+          <ArrowToResturants src={Arrow} alt="" />
+        </ArrowRouter>
       </AllResturantsCardChef>
     </>
   );

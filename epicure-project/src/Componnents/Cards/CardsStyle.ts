@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const CardStyled = styled.div`
@@ -42,14 +43,14 @@ export const CardDescreption = styled.div`
   /* identical to box height, or 125% */
   padding-top: 10px;
   letter-spacing: 1.97px;
-
+  height: 50%;
   color: #000000;
   background: #f9f4ea;
 `;
-export const CardImage = styled.div`
+export const CardImage = styled.img`
   width: 245px;
   height: 236px;
-  background-color: green;
+
   display: flex;
 
   align-items: flex-end;
@@ -91,11 +92,11 @@ export const AllCardsInsideChef = styled.div`
   gap: 15px;
 `;
 
-export const ResturantsRouterChef = styled.div`
+export const ResturantsRouterChef = styled(Link)`
   font-weight: 400;
   font-size: 16px;
   line-height: 35px;
-
+  text-decoration: none;
   /* identical to box height, or 219% */
   padding-bottom: 3px;
 

@@ -1,6 +1,6 @@
 import { Box, Tab, Tabs } from '@mui/material';
 import React from 'react';
-import MostPopularOnes from './MostPopularResturants';
+
 import { ContainerOfTabs } from './ResurantsStyle';
 
 export default function ColorTabs({
@@ -8,7 +8,7 @@ export default function ColorTabs({
 }: {
   handleChanger: (event: React.SyntheticEvent, newValue: string) => void;
 }) {
-  const [value, setValue] = React.useState('new');
+  const [value, setValue] = React.useState('All');
 
   return (
     <>
@@ -49,10 +49,35 @@ export default function ColorTabs({
               width: '100%',
             }}
           >
-            <Tab value="All" label="All" />
-            <Tab value="New" label="New" />
-            <Tab value="Most_Popular" label="Most Popular" />
-            <Tab value="Open_Now" label=" Open Now" />
+            <Tab
+              value="All"
+              label="All"
+              onClick={() => {
+                setValue('All');
+              }}
+            />
+
+            <Tab
+              value="New"
+              label="New"
+              onClick={() => {
+                setValue('New');
+              }}
+            />
+            <Tab
+              value="Most_Popular"
+              label="Most Popular"
+              onClick={() => {
+                setValue('Most_Popular');
+              }}
+            />
+            <Tab
+              value="Open_Now"
+              label=" Open Now"
+              onClick={() => {
+                setValue('Open_Now');
+              }}
+            />
           </Tabs>
         </Box>
       </ContainerOfTabs>

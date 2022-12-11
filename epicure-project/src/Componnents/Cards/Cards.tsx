@@ -1,5 +1,6 @@
 import {
   AllResturantsCard,
+  ArrowRouter,
   ArrowToResturants,
   ResturantsRouter,
 } from '../Home/HomeStyle';
@@ -13,7 +14,8 @@ import {
 } from './CardsStyle';
 import DishCard from './DishesCards';
 import Arrow from '../../assets/Arrow.svg';
-import CardsData from '../../Data/CardsData/CardsData.json';
+import CardsData from '../../Data/CardsData/ResturantCards.json';
+import Resturants from '../Resturants/Resturants';
 const Cards = () => {
   return (
     <>
@@ -21,11 +23,11 @@ const Cards = () => {
         <AllCardsInside>
           {CardsData.map((card) => {
             return (
-              <CardContainer>
-                <CardImage />
+              <CardContainer key={card.ID}>
+                <CardImage src={card.ResturantImage} alt="" />
                 <CardsLayout>
                   {card.ResturantName}
-                  <CardDescreption>{card.ChefName}</CardDescreption>
+                  <CardDescreption>{card.CheifName}</CardDescreption>
                 </CardsLayout>
               </CardContainer>
             );
@@ -33,8 +35,12 @@ const Cards = () => {
         </AllCardsInside>
       </CardStyled>
       <AllResturantsCard>
-        <ResturantsRouter>All Resturants</ResturantsRouter>
-        <ArrowToResturants src={Arrow} alt="" />
+        <ResturantsRouter to="/homePage_restaurants_All">
+          All Resturants
+        </ResturantsRouter>
+        <ArrowRouter to="/homePage_restaurants_All">
+          <ArrowToResturants src={Arrow} alt="" />
+        </ArrowRouter>
       </AllResturantsCard>
       <DishCard></DishCard>
     </>

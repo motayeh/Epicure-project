@@ -50,6 +50,7 @@ import {
   TextField,
 } from '@mui/material';
 import HamburgerHeader from './Hamburger/Hamburger';
+import Searchfiltered from '../Header/Hamburger/SearchBar/Search';
 
 const Head = () => {
   const [ifSearch, setIfSearch] = useState<boolean>(false);
@@ -89,31 +90,8 @@ const Head = () => {
           </LinkStyle>
         </MiddleBar>
         <RightBar>
-          <RightSearch
-            src={search}
-            alt=""
-            onClick={() => setIfSearch(true)}
-          ></RightSearch>
           <ItemsMove>
-            <OpenedSearch>
-              <Dialog
-                open={ifSearch}
-                scroll="body"
-                fullScreen={true}
-                style={{ height: '50%' }}
-                BackdropProps={{ invisible: true }}
-                onClose={() => setIfSearch(false)}
-              >
-                <XOut src={x} alt="" onClick={() => setIfSearch(false)}></XOut>
-                <BarSearchItems>
-                  <SearchImgInBar src={search} alt="" />
-                  <SearchBar
-                    type="search"
-                    placeholder="Search for restaurant cuisine, chef"
-                  />
-                </BarSearchItems>
-              </Dialog>
-            </OpenedSearch>
+            <Searchfiltered></Searchfiltered>
             <RightProfile
               src={account}
               alt=""
