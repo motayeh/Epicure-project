@@ -1,76 +1,35 @@
-import ColorTabs from './Tabs';
+import ColorTabs from '../Tabs';
 import {
   CardContainerResturants,
   CardDescreption,
   Cards,
   FoodImage,
   FooterStarter,
+  LinktoItem,
   ResturantCheif,
   ResturantName,
   ResturantsTitle,
-} from './ResurantsStyle';
-import CardsResturants from './ResturantsAllCards/CardsResturants';
+} from '../ResurantsStyle';
+import CardsResturants from '../ResturantsAllCards/CardsResturants';
 import React, { useEffect } from 'react';
-import ResturantCards from '../../Data/CardsData/ResturantCards.json';
+import ResturantCards from '../../../Data/CardsData/ResturantCards.json';
 import moment from 'moment';
 import { convertRoutesToDataRoutes } from '@remix-run/router/dist/utils';
-import ResturantInterface from './Interfaces/Interfaces';
+import ResturantInterface from '../Interfaces/Interfaces';
+import ResturantPage from './ResturantPages/ResturantPage';
+import { useLocation } from 'react-router-dom';
+import functionHelper from '../ResturantsAllCards/functionHelper';
 
-const Resturants = () => {
+const Resturants = (props: any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const { pathname } = useLocation();
   const [value, setValue] = React.useState('All');
+  const [datatoAnotherComp, setDatatoAnotherComp] = React.useState({});
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     window.history.replaceState('', '', `homePage_restaurants_${newValue}`);
-  };
-
-  const isOpened = (resturant: ResturantInterface) => {
-    const date = new Date();
-    const dayIs = moment(date).format('dddd');
-    const today = {
-      Open: '',
-      Close: '',
-    };
-
-    switch (dayIs) {
-      case 'Sunday':
-        today.Open = resturant.working_Days.Sunday.Open;
-        today.Close = resturant.working_Days.Sunday.Close;
-        break;
-      case 'Monday':
-        today.Open = resturant.working_Days.Monday.Open;
-        today.Close = resturant.working_Days.Monday.Close;
-        break;
-      case 'Tuesday':
-        today.Open = resturant.working_Days.Tuesday.Open;
-        today.Close = resturant.working_Days.Tuesday.Close;
-        break;
-      case 'Wednesday':
-        today.Open = resturant.working_Days.Wednesday.Open;
-        today.Close = resturant.working_Days.Wednesday.Close;
-        break;
-      case 'Thursday':
-        today.Open = resturant.working_Days.Thursday.Open;
-        today.Close = resturant.working_Days.Thursday.Close;
-        break;
-      case 'Friday':
-        today.Open = resturant.working_Days.Friday.Open;
-        today.Close = resturant.working_Days.Friday.Close;
-        break;
-      case 'Saturday':
-        today.Open = resturant.working_Days.Suturday.Open;
-        today.Close = resturant.working_Days.Suturday.Close;
-        break;
-    }
-
-    const currentTime = moment(moment().format('LT'), 'hh:mm a');
-    let openCurrently = moment(today.Open, 'hh:mm');
-    let closedCurrently = moment(today.Close, 'hh:mm');
-    let openNow = currentTime.isBetween(openCurrently, closedCurrently);
-
-    return openNow;
   };
 
   const orderNewValues = ResturantCards as ResturantInterface[];
@@ -91,7 +50,7 @@ const Resturants = () => {
 
       case 'Open_Now':
         return orderNewValues.filter((resturant: ResturantInterface) =>
-          isOpened(resturant)
+          functionHelper(resturant)
         );
       default:
         return ResturantCards;
@@ -102,13 +61,17 @@ const Resturants = () => {
     <>
       <ResturantsTitle>Restaurants</ResturantsTitle>
       <ColorTabs handleChanger={handleChange}></ColorTabs>
-
       <CardContainerResturants>
         {getList().map((Data) => {
           return (
             <>
               <Cards key={Data.ID}>
-                <FoodImage src={Data.ResturantImage} />
+                <LinktoItem
+                  to={'/homePage_restaurants/' + Data.ID}
+                  state={Data.ID}
+                >
+                  <FoodImage src={Data.ResturantImage} />
+                </LinktoItem>
                 <CardDescreption>
                   <ResturantName>{Data.ResturantName}</ResturantName>
                   <ResturantCheif>{Data.CheifName}</ResturantCheif>
@@ -118,7 +81,6 @@ const Resturants = () => {
           );
         })}
       </CardContainerResturants>
-
       <FooterStarter></FooterStarter>
     </>
   );

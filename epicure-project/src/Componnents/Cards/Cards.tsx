@@ -15,7 +15,7 @@ import {
 import DishCard from './DishesCards';
 import Arrow from '../../assets/Arrow.svg';
 import CardsData from '../../Data/CardsData/ResturantCards.json';
-import Resturants from '../Resturants/Resturants';
+import Resturants from '../Resturants/Resturant/Resturants';
 const Cards = () => {
   return (
     <>

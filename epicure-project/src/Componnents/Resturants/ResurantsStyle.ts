@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ContainerOfTabs = styled.div`
@@ -81,4 +82,9 @@ export const ResturantCheif = styled.div`
   letter-spacing: 1.97px;
 
   color: #000000;
+`;
+export const LinktoItem = styled(Link)`
+  text-decoration: none;
+
+  width: 100%;
 `;
