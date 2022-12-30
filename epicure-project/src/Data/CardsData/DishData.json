@@ -9,8 +9,8 @@
     "FoodType": "Spicy",
     "Meals": "BreakFast",
     "Price": "₪55",
-    "Sides": { "1": "White Bread", "2": "Sticky Rice" },
-    "Changes": { "1": "Without Kemiri Nuts", "2": "Extra Lemon Grass" }
+    "Sides": [{ "1": "White Bread" }, { "2": "Sticky Rice" }],
+    "Changes": [{ "1": "Without Kemiri Nuts" }, { "2": "Extra Lemon Grass" }]
   },
   {
     "ID": 2,

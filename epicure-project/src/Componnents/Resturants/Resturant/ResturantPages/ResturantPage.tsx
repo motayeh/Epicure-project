@@ -43,7 +43,7 @@ const ResturantPage = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: String) => {
     setValue(newValue);
     const origin = event;
-    window.history.pushState(state, '', `${newValue}`);
+
     document.title = 'Epicure Resturant Page';
   };
 

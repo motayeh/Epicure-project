@@ -1,4 +1,4 @@
-interface DishInterface {
+export interface DishInterface {
   ID: number;
   ResturantID: number;
   DishImage: string;

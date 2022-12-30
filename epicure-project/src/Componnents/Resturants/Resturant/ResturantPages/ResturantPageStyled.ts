@@ -145,6 +145,7 @@ export const BorderDrawer = styled.div`
 `;
 
 export const LinktoDishPage = styled(Link)`
+  width: 100%;
   text-decoration: none !important;
   border: 0px !important;
   outline: none;
@@ -152,4 +153,6 @@ export const LinktoDishPage = styled(Link)`
   outline-width: 0px;
   border-bottom: none;
   text-decoration-style: none;
+  padding-left: 9%;
+  height: 56.5%;
 `;
