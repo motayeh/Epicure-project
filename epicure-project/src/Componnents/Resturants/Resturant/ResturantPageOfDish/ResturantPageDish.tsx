@@ -20,8 +20,7 @@ import FormLabel from '@mui/material/FormLabel';
 import { KeyObject } from 'crypto';
 import { keyframes } from 'styled-components';
 import { SigntuerDish } from '../../../Home/HomeStyle';
-import dishSides from '../../../../Data/CardsData/DishSidesData.json';
-import SideDishes from '../../Interfaces/SideDishes';
+
 const ResturantPageDish = () => {
   const { id2 } = useParams();
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -29,9 +28,9 @@ const ResturantPageDish = () => {
   const getEnvironmentData = () => {
     return list.filter((data) => data.ID === Number(id2));
   };
-  const optionsList = dishSides as SideDishes[];
+
   const getOption = () => {
-    return optionsList.find((option) => option.id === Number(id2));
+    return list.find((option) => option.ID === Number(id2));
   };
 
   return (
@@ -44,7 +43,7 @@ const ResturantPageDish = () => {
               <DishName>{Data.DishName}</DishName>
             </DataofDishContainer>
 
-            {getOption()?.options.map((option) => {
+            {getOption()?.Sides.options.map((option) => {
               return (
                 <>
                   {option.title}
